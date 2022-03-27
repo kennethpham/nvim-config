@@ -15,3 +15,4 @@ require 'packer.configs.lsp.lua-language-server'
 -- require 'packer.lsp.ccls';
 require 'packer.configs.telescope'
 require 'packer.configs.gitsigns'
+require 'packer.configs.nvim-colorizer'
