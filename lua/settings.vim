@@ -2,7 +2,7 @@
 
 " Set dracula colorscheme
 " let g:dracula_colorterm = 0
-set background=dark
+" set background=dark
 set termguicolors
 colorscheme gruvbox
 
@@ -44,3 +44,5 @@ hi normal guibg=none
 " color text after column 80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
+
+nnoremap <leader>kk :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab<CR>

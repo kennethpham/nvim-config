@@ -1,4 +1,3 @@
--- Kenneth's packer config
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
@@ -17,9 +16,12 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} },
   }
 
-  use 'itchyny/lightline.vim'
+  -- use 'itchyny/lightline.vim'
 
-  use '9mm/vim-closer'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   use 'tpope/vim-commentary'
 
@@ -33,6 +35,12 @@ return require('packer').startup(function(use)
 
   use 'hrsh7th/cmp-buffer'
 
+  use 'hrsh7th/cmp-path'
+
+  use 'saadparwaiz1/cmp_luasnip'
+
+  use { 'L3MON4D3/LuaSnip' }
+
   use 'onsails/lspkind-nvim'
 
     -- Post-install/update hook with neovim command
@@ -40,15 +48,20 @@ return require('packer').startup(function(use)
 
   use 'jackguo380/vim-lsp-cxx-highlight'
 
+  use 'mfussenegger/nvim-jdtls'
+
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} },
   }
 
   -- You can alias plugin names
-  use {'dracula/vim', as = 'dracula'}
+  -- use {'dracula/vim', as = 'dracula'}
+  use 'Mofiqul/dracula.nvim'
 
   use {'ellisonleao/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}
+
+  use 'folke/tokyonight.nvim'
 
   use {
     'chipsenkbeil/distant.nvim',
@@ -61,7 +74,12 @@ return require('packer').startup(function(use)
         -- 3. Provides keybinding to jump into a remote file's parent directory
         ['*'] = require('distant.settings').chip_default()
       }
-  end
-}
+    end
+  }
+
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} },
+  }
 
 end)

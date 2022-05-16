@@ -8,6 +8,8 @@ vim.cmd([[source ~/.config/nvim/lua/settings.vim]])
 
 -- Plugin Config
 vim.cmd([[source ~/.config/nvim/lua/packer/configs/lightline.vim]])
+vim.cmd([[set termguicolors]])
+require 'packer.configs.lualine'
 vim.cmd([[source ~/.config/nvim/lua/packer/configs/vim-fugitive.vim]])
 require 'packer.configs.lsp.nvim-lspconfig';
 require 'packer.configs.lsp.nvim-cmp'
@@ -16,3 +18,4 @@ require 'packer.configs.lsp.lua-language-server'
 require 'packer.configs.telescope'
 require 'packer.configs.gitsigns'
 require 'packer.configs.nvim-colorizer'
+require 'packer.configs.null-ls'
